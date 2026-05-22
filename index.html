@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wassou Nouhoun | Technicien Réseaux & Développeur Web</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <style>
+    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
+    .card-hover { transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-20px) scale(1.04); }
+    .progress-container { height: 12px; background: #334155; border-radius: 9999px; overflow: hidden; }
+    .progress-bar { height: 100%; background: linear-gradient(90deg, #22d3ee, #67e8f9); width: 0%; 
+                    transition: width 2s cubic-bezier(0.34, 1.56, 0.64, 1); border-radius: 9999px; }
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 1s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-slate-950/90 backdrop-blur-lg border-b border-slate-800 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <h1 class="text-3xl font-bold">Wassou <span class="text-cyan-400">Nouhoun</span></h1>
+      <div class="flex items-center gap-8">
+        <button onclick="toggleLanguage()" class="text-sm font-medium px-4 py-2 border border-slate-700 rounded-2xl hover:border-cyan-400 transition">🇫🇷 / 🇬🇧</button>
+        <button onclick="toggleTheme()" id="theme-toggle" class="text-2xl hover:text-cyan-400 transition"><i class="fa-solid fa-moon"></i></button>
+        <a href="#contact" class="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-3 rounded-2xl transition">Me contacter</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="accueil" class="hero-bg min-h-screen flex items-center pt-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-8">
+        <h2 class="text-6xl md:text-7xl font-bold leading-tight">Technicien Réseaux &<br><span class="text-cyan-400">Développeur Web</span></h2>
+        <p class="text-2xl text-slate-300">Passionné par les infrastructures réseaux, la cybersécurité et la création de solutions digitales performantes.</p>
+        
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact" class="bg-white text-black px-10 py-5 rounded-3xl font-bold text-lg hover:scale-105 transition">Disponible immédiatement</a>
+          <a href="#projets" class="border-2 border-cyan-400 text-cyan-400 px-10 py-5 rounded-3xl font-bold text-lg hover:bg-cyan-400 hover:text-black transition">Voir mes projets</a>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div class="rounded-3xl shadow-2xl w-full max-w-lg border-4 border-cyan-500/30 bg-slate-800 h-96 flex items-center justify-center">
+          <i class="fa-solid fa-user text-8xl text-slate-600"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-24 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16">Mes Services Premium</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="service-card bg-slate-800 p-10 rounded-3xl card-hover">
+          <i class="fa-solid fa-network-wired text-6xl text-cyan-400 mb-6"></i>
+          <h3 class="text-3xl font-bold mb-4">Réseaux & Télécoms</h3>
+          <p class="text-slate-400">Conception, déploiement et maintenance d'infrastructures réseaux sécurisées.</p>
+        </div>
+        <div class="service-card bg-slate-800 p-10 rounded-3xl card-hover">
+          <i class="fa-solid fa-code text-6xl text-cyan-400 mb-6"></i>
+          <h3 class="text-3xl font-bold mb-4">Développement Web</h3>
+          <p class="text-slate-400">Création de sites web modernes, performants et responsive.</p>
+        </div>
+        <div class="service-card bg-slate-800 p-10 rounded-3xl card-hover">
+          <i class="fa-solid fa-laptop-medical text-6xl text-cyan-400 mb-6"></i>
+          <h3 class="text-3xl font-bold mb-4">Maintenance IT</h3>
+          <p class="text-slate-400">Dépannage, optimisation et gestion complète du parc informatique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compétences -->
+  <section id="competences" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16">Compétences Techniques</h2>
+      <div class="max-w-2xl mx-auto space-y-12">
+        <div>
+          <div class="flex justify-between mb-3"><span class="font-semibold">Développement Web (HTML, CSS, JS)</span><span class="text-cyan-400">85%</span></div>
+          <div class="progress-container"><div class="progress-bar" data-width="85"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-3"><span class="font-semibold">Réseaux & Télécommunications</span><span class="text-cyan-400">90%</span></div>
+          <div class="progress-container"><div class="progress-bar" data-width="90"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-3"><span class="font-semibold">Maintenance Informatique</span><span class="text-cyan-400">88%</span></div>
+          <div class="progress-container"><div class="progress-bar" data-width="88"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expérience -->
+  <section id="experience" class="py-24 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16">Expérience Professionnelle</h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-slate-800 p-10 rounded-3xl card-hover">
+          <h3 class="text-2xl font-bold">Agent de Collecte de Données</h3>
+          <p class="text-cyan-400">APN – Africa Parks Network • 2026</p>
+          <p class="mt-4 text-slate-300">Collecte terrain avec KoboCollect, tracking GPS et validation des données.</p>
+        </div>
+        <div class="bg-slate-800 p-10 rounded-3xl card-hover">
+          <h3 class="text-2xl font-bold">Stagiaire IT & Maintenance</h3>
+          <p class="text-cyan-400">Berg-Junior Center • 2019</p>
+          <p class="mt-4 text-slate-300">Maintenance, dépannage et assistance technique aux utilisateurs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projets -->
+  <section id="projets" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16">Projets Réalisés</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="bg-slate-800 rounded-3xl overflow-hidden card-hover">
+          <div class="h-72 bg-gradient-to-br from-cyan-900 to-blue-900 flex items-center justify-center text-8xl">🌐</div>
+          <div class="p-8"><h3 class="text-3xl font-bold">Sites Web Professionnels</h3></div>
+        </div>
+        <div class="bg-slate-800 rounded-3xl overflow-hidden card-hover">
+          <div class="h-72 bg-gradient-to-br from-emerald-900 to-cyan-900 flex items-center justify-center text-8xl">🔗</div>
+          <div class="p-8"><h3 class="text-3xl font-bold">Configuration de Réseaux Locaux</h3></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-32 bg-gradient-to-br from-cyan-950 to-slate-900">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold mb-8">Prêt à collaborer ?</h2>
+      <p class="text-xl mb-12">Je suis disponible pour des missions en réseaux, développement web, maintenance IT ou projets terrain.</p>
+
+      <div id="success-message" class="hidden bg-emerald-900 border border-emerald-500 text-emerald-300 p-6 rounded-3xl mb-8"></div>
+      <div id="error-message" class="hidden bg-red-900 border border-red-500 text-red-300 p-6 rounded-3xl mb-8"></div>
+
+      <form id="contact-form" action="https://formspree.io/f/mykvwozr" method="POST" class="space-y-8">
+        <input type="text" name="name" placeholder="Votre nom complet" required class="w-full bg-slate-800 border border-slate-700 rounded-2xl px-6 py-5 focus:border-cyan-400 outline-none">
+        <input type="email" name="email" placeholder="Votre adresse email" required class="w-full bg-slate-800 border border-slate-700 rounded-2xl px-6 py-5 focus:border-cyan-400 outline-none">
+        <textarea name="message" rows="6" placeholder="Décrivez votre projet ou votre demande..." required class="w-full bg-slate-800 border border-slate-700 rounded-2xl px-6 py-5 focus:border-cyan-400 outline-none"></textarea>
+
+        <button type="submit" id="submit-btn" class="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-7 rounded-3xl text-xl transition">
+          Envoyer le message
+        </button>
+      </form>
+
+      <div class="mt-12">
+        <a href="#" onclick="alert('CV sera disponible bientôt!'); return false;" class="inline-flex items-center gap-3 bg-slate-800 hover:bg-slate-700 border border-cyan-400 text-cyan-400 font-semibold px-8 py-4 rounded-3xl transition">
+          <i class="fa-solid fa-download"></i> Télécharger mon CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black py-12 text-center text-slate-500">
+    <p>© 2026 Wassou Nouhoun • Technicien Réseaux & Développeur Web • Bénin</p>
+  </footer>
+
+  <script>
+    // Formulaire handling
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submit-btn');
+      const successMsg = document.getElementById('success-message');
+      const errorMsg = document.getElementById('error-message');
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Envoi en cours...`;
+
+      fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          successMsg.textContent = 'Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.';
+          successMsg.classList.remove('hidden');
+          errorMsg.classList.add('hidden');
+          this.reset();
+        } else {
+          errorMsg.textContent = 'Une erreur est survenue. Veuillez réessayer ou contactez-moi directement.';
+          errorMsg.classList.remove('hidden');
+          successMsg.classList.add('hidden');
+        }
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Envoyer le message';
+      }).catch(() => {
+        errorMsg.textContent = 'Une erreur est survenue. Veuillez réessayer ou contactez-moi directement.';
+        errorMsg.classList.remove('hidden');
+        successMsg.classList.add('hidden');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Envoyer le message';
+      });
+    });
+
+    // Autres fonctions
+    function animateProgressBars() {
+      document.querySelectorAll('.progress-bar').forEach(bar => {
+        bar.style.width = bar.getAttribute('data-width') + '%';
+      });
+    }
+
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+      const icon = document.getElementById('theme-toggle');
+      icon.innerHTML = document.documentElement.classList.contains('dark') ? 
+        '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+    }
+
+    function toggleLanguage() {
+      alert("Version anglaise bientôt disponible !");
+    }
+
+    // Animations au scroll
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.card-hover').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.8) {
+          el.classList.add('reveal', 'active');
+        }
+      });
+
+      const compSection = document.getElementById('competences');
+      if (compSection && compSection.getBoundingClientRect().top < window.innerHeight * 0.75) {
+        animateProgressBars();
+      }
+    });
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        if (document.getElementById('competences').getBoundingClientRect().top < window.innerHeight * 0.9) {
+          animateProgressBars();
+        }
+      }, 800);
+    });
+  </script>
+</body>
+</html>
